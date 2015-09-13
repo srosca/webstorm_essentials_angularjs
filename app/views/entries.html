@@ -1,0 +1,7 @@
+<article ng-repeat="entry in entries | orderBy:'-'">
+    <h1><a href="#/entry/{{ entries.indexOf(entry) }}">{{ entry.title }}</a></h1>
+    <p>
+        {{entry.content | summary }}
+        <a href="#/entry/{{ entries.indexOf(entry) }}">... (read more)</a>
+    </p>
+</article>
